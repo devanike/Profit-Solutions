@@ -1,21 +1,4 @@
-@media only screen and (max-width: 768px) {
-    /* intro section */
-    .intro {
-        padding: 1rem;
-    }
-
-    /* .intro-info {
-        padding: 0;
-    }
-
-    .intro img {
-        width: 12rem;
-    }
-
-    .intro a.btn, .intro h4 {
-        font-size: 1.2rem;
-    } */
-    
+@media only screen and (max-width: 1255px) {
     /* mobile menu */
     .mobile-menu {
         height: 100vh;
@@ -50,6 +33,15 @@
         justify-content: flex-end;
     }
 
+}
+
+@media only screen and (max-width: 768px) {
+    /* intro section */
+    .intro {
+        padding: 1rem;
+    }
+
+    
     @keyframes slideBackground {
         0% {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/building-small-2.jpg') no-repeat center/cover;
