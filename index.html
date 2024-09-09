@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3ed11200e3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="queries.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <!-- intro section -->
+        <header class="intro">
+            <div class="slider">
+                <img src="img/building-1.jpg" alt="Sliding Image" id="sliderImg">
+            </div>
+            <div class="intro-overlay">
+                <div class="intro-info">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
+                    <h1>Welcome to Finserv</h1>
+                    <div class="div"><h4>Flexible, affordable, scalable, customization, easy to use and secured solution for digital banking.</h4></div>
+                    <a class="btn" href="#navbar">Get Started</a>
+                </div>
+            </div>
+        </header>
+        <!-- navbar -->
+        <nav class="navbar" id="navbar">
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="nav-list hide-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a>Why Finserv <i class="fa-solid fa-sort-down"></i></a>
+                            <ul class="block">
+                                <li><a href="profile.html">Company's Profile</a></li>
+                                <li><a href="#navbar">About Profit Solutions</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#benefits">Benefits</a></li>
+                                <li><a href="#faq-content">Faqs</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Solutions <i class="fa-solid fa-sort-down"></i></a>
+                            <ul class="block">
+                                <li><a href="cloud-banking.html">Cloud Banking Software</a></li>
+                                <li><a href="loan-management.html">Loan Management Solution</a></li>
+                                <li><a href="daily-cont.html">Daily Contribution Management</a></li>
+                                <li><a href="investment.html">Investment Management</a></li>
+                                <li><a href="internet.html">Internet Banking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pricing.html">Pricing <i></i></a></li>
+                        <li><a>Support <i class="fa-solid fa-sort-down"></i></a>
+                            <ul class="block">
+                                <li><a href="doc.html">Documentation</a></li>
+                                <li><a href="brochure.html">Brochure</a></li>
+                                <li><a href="#footer">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="sign-up.html">Sign Up</a></li>
+                        <li><a href="quote.html">Request a quote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="socials hide-socials">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-toggle hide-bar">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="mobile-menu">
+                <!-- <button class="close-menu">&times;</button> -->
+                <div class="close">
+                    <a href="#"><i class="close-menu fa-solid fa-times"></i></a>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="hide-link">Why Finserv <i class="fa-solid fa-sort-down"></i></a>
+                            <ul class="block">
+                                <li><a href="profile.html">Company's Profile</a></li>
+                                <li><a href="#navbar">About Profit Solutions</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#benefits">Benefits</a></li>
+                                <li><a href="#faq-content">Faqs</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="hide-link">Solutions <i class="fa-solid fa-sort-down"></i></a>
+                            <ul class="block">
+                                <li><a href="cloud-banking.html">Cloud Banking Software</a></li>
+                                <li><a href="loan-management.html">Loan Management Solution</a></li>
+                                <li><a href="daily-cont.html">Daily Contribution Management</a></li>
+                                <li><a href="investment.html">Investment Management</a></li>
+                                <li><a href="internet.html">Internet Banking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pricing.html">Pricing <i></i></a></li>
+                        <li><a class="hide-link">Support <i class="fa-solid fa-sort-down"></i></a>
+                            <ul class="block">
+                                <li><a href="doc.html">Documentation</a></li>
+                                <li><a href="brochure.html">Brochure</a></li>
+                                <li><a href="#footer">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="hide-link">Login <i class="fa-solid fa-sort-down"></i></a>
+                            <ul class="block">
+                                <li><a href="cloud-login.html">Cloud Banking Software</a></li>
+                                <li><a href="internet-login.html">Internet Banking App</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sign-up.html">Sign Up</a></li>
+                        <li><a href="quote.html">Request a quote</a></li>
+                    </ul>
+                </div>
+                <div class="socials">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <main class="main">
+            <!-- about section -->
+            <div class="about">
+                <div class="image-box">
+                    <div class="colored-box"></div>
+                    <img src="img/learn-img.jpg" alt="Image">
+                </div>
+                <div class="about-info">
+                    <h1>Cloud Core Banking</h1>
+                    <p>FinServ provides robust, simplified and rich financial management solutions for Microfinance Banks, Cooperative Societies, Thrift/Daily Savings, Lenders, Fintechs, NeoBank, NGO's, Finance House and Non-Micro Finance Bank</p>
+                    <p>Flexible, affordable, scalable, customization, easy to use and secured solution for digital banking and financial services operations and management.</p>
+                    <a class="btn">Try It For Free</a>
+                </div>
+            </div>
+            
+            <!-- achievement -->
+            <div class="rows">
+                <div class="circle">
+                    <span class="stats-no">200+</span>
+                    <p>Intuitions</p>
+                </div>
+                <div class="circle">
+                    <span class="stats-no">400K+</span>
+                    <p>Intuitions</p>
+                </div>
+                <div class="circle">
+                    <span class="stats-no">1M+</span>
+                    <p>Intuitions</p>
+                </div>
+                <div class="circle">
+                    <span class="stats-no">&#8358;1B+</span>
+                    <p>Intuitions</p>
+                </div>
+            </div>
+
+            <div class="features" id="features">
+                <div class="heading">
+                    <h3>FEATURES</h3>
+                    <h5>Wide range of features and functionalities for retail and corporate financial services management</h5>
+                </div>
+                <div class="features-images">
+                    <div class="image-container">
+                        <img src="img/6-steps-customer-focused-culture.png" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/istockphoto-1400960132-612x612.jpg" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/6-steps-customer-focused-culture.png" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/istockphoto-1400960132-612x612.jpg" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/istockphoto-1400960132-612x612.jpg" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/6-steps-customer-focused-culture.png" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/istockphoto-1400960132-612x612.jpg" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/6-steps-customer-focused-culture.png" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/6-steps-customer-focused-culture.png" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/istockphoto-1400960132-612x612.jpg" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/6-steps-customer-focused-culture.png" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="img/istockphoto-1400960132-612x612.jpg" alt="Background Image">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h1>Customers</h1>
+                                <p>Manage new customer registration and onboarding process, data verification, KYC, BVN, etc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="benefits" id="benefits">
+                <div class="heading">
+                    <h3>BENEFITS</h3>
+                    <h5>Equip your business with innovative solution, technology expertise and real world industry experience</h5>
+                </div>
+                <div class="benefits-info">
+                    <div class="benefit">
+                        <img src="img/simplify.jpeg" alt="Benefit Image">
+                        <div class="benefit-info">
+                            <h3>Simplify</h3>
+                            <p>With digital bankinf solution, operation are well simplified with automation of processes ande departmental workflow
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img src="img/efficiency.jpeg" alt="Benefit Image">
+                        <div class="benefit-info">
+                            <h3>Efficiency</h3>
+                            <p>Business become more efficient by removing bottlenecks and focus shifted to the most important aspect of financial services
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img src="img/simplify.jpeg" alt="Benefit Image">
+                        <div class="benefit-info">
+                            <h3>Simplify</h3>
+                            <p>With digital bankinf solution, operation are well simplified with automation of processes ande departmental workflow
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img src="img/efficiency.jpeg" alt="Benefit Image">
+                        <div class="benefit-info">
+                            <h3>Efficiency</h3>
+                            <p>Business become more efficient by removing bottlenecks and focus shifted to the most important aspect of financial services
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img src="img/simplify.jpeg" alt="Benefit Image">
+                        <div class="benefit-info">
+                            <h3>Simplify</h3>
+                            <p>With digital bankinf solution, operation are well simplified with automation of processes ande departmental workflow
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img src="img/efficiency.jpeg" alt="Benefit Image">
+                        <div class="benefit-info">
+                            <h3>Efficiency</h3>
+                            <p>Business become more efficient by removing bottlenecks and focus shifted to the most important aspect of financial services
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-content" id="faq-content">
+                <div class="faq-info">
+                    <div class="faq-text">
+                        <h3>Frequently Asked Questions</h3>
+                        <p>Below are list of answers to the most frequestly asked questions</p>
+                    </div>
+                    <img src="img/question-removebg-preview.png" alt="Question Mark">
+                </div>
+                <section id="accordion" class="accordion">
+                    <div class="accordion-container">
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" id="accordion-trigger-1" aria-expanded="false" aria-controls="accordion-content-1">
+                                <span class="accordion-title">
+                                Is Finserv the right solution for me?
+                                </span>
+                                <span class="accordion-icon">
+                                &plus;
+                                </span>
+                            </button>
+                            <div class="accordion-content" id="accordion-content-1" role="region" aria-labelledby="accordion-trigger-1">
+                                <h4>Yes. Absolutely.</h4>
+                                <p>If you run lending service, daily contribtion, property financing agency, fintech or corperative society chances are good that you require a solution like FinServ.</p>
+                            </div>
+                        </div>
+            
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" id="accordion-trigger-2" aria-expanded="false" aria-controls="accordion-content-2">
+                                <span class="accordion-title">
+                                Is there a way to quicky import existing records?
+                                </span>
+                                <span class="accordion-icon">
+                                &plus;
+                                </span>
+                            </button>
+                            <div class="accordion-content" id="accordion-content-2" role="region" aria-labelledby="accordion-trigger-3">
+                                <h4>Absolutely.</h4>
+                                <p>In fact, a good number of our clients are lenders and loan operator who want to manage their loan disbursements, repayments and daily contribution.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" id="accordion-trigger-3" aria-expanded="false" aria-controls="accordion-content-3">
+                                <span class="accordion-title">
+                                Can I change plan when I have more customers?
+                                </span>
+                                <span class="accordion-icon">
+                                &plus;
+                                </span>
+                            </button>
+                            <div class="accordion-content" id="accordion-content-3" role="region" aria-labelledby="accordion-trigger-3">
+                                <h4>Of course you can!</h4>
+                                <p>Log on to FinServ, click the change subscription button on settings menu and follow the instructions and steps to change your plan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="testimony-content">
+                <div class="testimonies">
+                    <div class="testimony slide">
+                        <h2>What Our Clients Have To Say</h2>
+                        <ul>
+                            <li><img src="img/circle-3.png" alt="Circle Image"></li>
+                            <li><img src="img/person-1.jpg" alt="Person Image"></li>
+                            <li><img src="img/circle-1.png" alt="Circle Image"></li>
+                        </ul>
+                        <p>I especially love the Reporting Tools module because it gives me such a great amount of information based on little amounts of input gathered in just few weeks of light weight usage. Recommended!</p>
+                    </div>
+                    <div class="testimony slide">
+                        <h2>What Our Clients Have To Say</h2>
+                        <ul>
+                            <li><img src="img/circle-3.png" alt="Circle Image"></li>
+                            <li><img src="img/person-2.jpg" alt="Person Image"></li>
+                            <li><img src="img/circle-1.png" alt="Circle Image"></li>
+                        </ul>
+                        <p>I especially love the Reporting Tools module because it gives me such a great amount of information based on little amounts of input gathered in just few weeks of light weight usage. Recommended!</p>
+                    </div>
+                    <div class="testimony slide">
+                        <h2>What Our Clients Have To Say</h2>
+                        <ul>
+                            <li><img src="img/circle-3.png" alt="Circle Image"></li>
+                            <li><img src="img/person-1.jpg" alt="Person Image"></li>
+                            <li><img src="img/circle-1.png" alt="Circle Image"></li>
+                        </ul>
+                        <p>I especially love the Reporting Tools module because it gives me such a great amount of information based on little amounts of input gathered in just few weeks of light weight usage. Recommended!</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="footer" id="footer">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>About FinServ</h4>
+                        <p>Robust and comprehensive core banking solution for retail and corporate banks, digital banks & lenders, EMIs, MFIs, Fintechs and financial services ecosystem</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Important Links</h4>
+                        <ul class="links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="sign-up.html">Sign Up</a></li>
+                            <li><a href="doc.html">Doc</a></li>
+                            <li>Read our <a href="#">Terms & Conditions,</a><a href=""> Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul class="links">
+                            <li><a href="#"><i class="fa-solid fa-location-pin"></i>Plucom Technology Ltd. NG</a></li>
+                            <li><a href="#"><i class="fa-solid fa-phone"></i>+234 (0) 706 634 8696</a></li>
+                            <li><a href="#"><i class="fa-solid fa-globe"></i>finserv.com.ng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Newsletter</h4>
+                        <p>
+                        Subscribe to our newsletter for a weekly dose
+                        of news, updates, helpful tips, and
+                        exclusive offers.
+                        </p>
+                        <form action="#">
+                            <input type="text" placeholder="Your email" required>
+                            <button type="submit">SUBSCRIBE</button>
+                        </form>
+                        <div class="icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

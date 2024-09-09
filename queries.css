@@ -1,0 +1,234 @@
+@media only screen and (max-width: 768px) {
+    /* intro section */
+    .intro {
+        padding: 1rem;
+    }
+
+    /* .intro-info {
+        padding: 0;
+    }
+
+    .intro img {
+        width: 12rem;
+    }
+
+    .intro a.btn, .intro h4 {
+        font-size: 1.2rem;
+    } */
+    
+    /* mobile menu */
+    .mobile-menu {
+        height: 100vh;
+    }
+
+    .hide-nav, .hide-socials {
+        display: none;
+    }
+
+    .nav-list ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list > ul > li ul li{
+        margin-bottom: 0;
+    }
+
+    .mobile-menu {
+        max-height: 100%;
+        display: grid;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu .close{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @keyframes slideBackground {
+        0% {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/building-small-2.jpg') no-repeat center/cover;
+        }
+        33% {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/building-small-3.jpg') no-repeat center/cover;
+        }
+        66% {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/building-small-one.jpg') no-repeat center/cover;
+        }
+        100% {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/building-small-2.jpg') no-repeat center/cover;
+        }
+    }
+
+    /* about section */
+    .about {
+        /* grid-template-columns: repeat( 1, 1fr); */
+        display: flex;
+        flex-direction: column;
+        gap: 18rem;
+    }
+
+    .image-box {
+        margin-top: -5rem;
+    }
+
+    .about img, .colored-box {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .about-info {
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    /* benefits and features heading */
+    .heading h3 {
+        font-size: 2.5rem;
+    }
+
+    .heading h5 {
+        font-size: 1.5rem;
+    }
+
+    /* footer */
+    .footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .footer .footer-row {
+        padding: 20px;
+        gap: 1rem;
+    }
+
+    .footer-col form {
+        display: block;
+    }
+
+    .footer-col form :where(input, button) {
+        width: 100%;
+    }
+
+    .footer-col form button {
+        margin: 10px 0 0 0;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width: 950px) {
+    .about img, .colored-box {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .about-info {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .image-container {
+        flex: 1 1 calc(33.33% - 10px);
+    }
+    
+    .faq-info {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .image-container {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .image-container {
+        flex: 1 1 100%;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 22rem;
+    }
+}
+
+@media only screen and (max-width: 1540px) {
+    .testimonies {
+        height: 36rem;
+    }
+
+    @keyframes autoplay3 {
+        0% {margin-top: 36rem}
+        4% {margin-top: 0rem}
+        31% {margin-top: 0rem}
+        35% {margin-top: -37rem}
+        64% {margin-top: -37rem}
+        68% {margin-top: -72rem}
+        96% {margin-top: -72rem}
+        100% {margin-top: -108rem}
+    }
+}
+
+@media only screen and (max-width: 796px) {
+    .testimonies {
+        height: 38rem;
+    }
+
+    @keyframes autoplay3 {
+        0% {margin-top: 38rem}
+        4% {margin-top: 0rem}
+        31% {margin-top: 0rem}
+        35% {margin-top: -39rem}
+        64% {margin-top: -39rem}
+        68% {margin-top: -76rem}
+        96% {margin-top: -76rem}
+        100% {margin-top: -110rem}
+    }
+
+    .testimony ul li:first-child img,
+    .testimony ul li:last-child img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .testimonies {
+        height: 35rem;
+    }
+
+    @keyframes autoplay3 {
+        0% {margin-top: 36rem}
+        4% {margin-top: 0rem}
+        31% {margin-top: 0rem}
+        35% {margin-top: -36rem}
+        64% {margin-top: -36rem}
+        68% {margin-top: -70rem}
+        96% {margin-top: -70rem}
+        100% {margin-top: -98rem}
+    }
+
+    .testimony img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .testimony ul li:first-child img,
+    .testimony ul li:last-child img{
+        display: none;
+    }
+
+}

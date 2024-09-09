@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3ed11200e3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="queries.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <nav class="navbar" id="navbar">
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="socials hide-socials">
+                <ul class="special-menu">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-toggle hide-bar">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="mobile-menu">
+                <!-- <button class="close-menu">&times;</button> -->
+                <div class="close">
+                    <a href="#"><i class="close-menu fa-solid fa-times"></i></a>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <main class="main">
+        <!-- login -->
+            <section class="forms">
+                <h1>Log In</h1>
+                <p>You don't have an account? Then please <a href="sign-up.html">Sign Up</a></p>
+                <form action="" class="form">
+                    <div class="form__field">
+                        <i class="form__icon fas fa-user"></i>
+                        <input type="text" class="form__input" placeholder="User name / Email">
+                    </div>
+                    <div class="form__field">
+                        <i class="form__icon fas fa-lock"></i>
+                        <input type="password" class="form__input" placeholder="Password">
+                    </div>
+                    <a href="#" class="btn">LOG IN</a>
+                </form>
+                <a href="forgot-password.html">Forgot Password?</a>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
