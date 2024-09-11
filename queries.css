@@ -41,6 +41,22 @@
         padding: 1rem;
     }
 
+    .intro-info img {
+        width: 10rem;
+    } 
+
+    .intro a.btn, .intro-info h4 {
+        font-size: .8rem;
+    }
+
+    .intro-info h1 {
+        font-size: 2rem;
+    }
+
+    /* features */
+    .image-container {
+        width: 70%;
+    }
     
     @keyframes slideBackground {
         0% {
@@ -66,18 +82,23 @@
     }
 
     .image-box {
-        margin-top: -5rem;
+        margin-top: -3rem;
     }
 
     .about img, .colored-box {
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 15rem;
     }
 
     .about-info {
         width: 100%;
         padding: 1rem;
-        gap: 1rem;
+        gap: .5rem;
+        margin-top: -2rem;
+    }
+
+    .about-info h1 {
+        font-size: 2.5rem;
     }
 
     /* benefits and features heading */
@@ -87,6 +108,85 @@
 
     .heading h5 {
         font-size: 1.5rem;
+    }
+
+    .overlay-content h1 {
+        font-size: 1.8em; 
+    }
+    
+    .overlay-content p {
+        font-size: 1em; 
+    }
+    
+    /* faq */
+    .faq-info img {
+        width: 10rem;
+    }
+
+    /* testimonies */
+    .testimonies {
+        height: 36rem;
+    }
+
+    /* profiles */
+    .profiles {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .profile {
+        padding-top: 0;
+    }
+
+    .card--info {
+        width: 100%;
+    }
+
+    .card--display img {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    }
+
+    /* solutions */
+    .solution header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .solution-info {
+        padding: 1rem;
+    }
+
+    .text, .solution-img {
+        width: 100%;
+    }
+    
+    .solution img {
+        width: 20rem;
+        height: 30rem;
+        border-end-end-radius: 5rem;
+        border-start-start-radius: 5rem;
+    }
+
+    /* docs */
+    .docs {
+        margin-bottom: 1rem;
+        min-height: 400vh;
+    }
+
+    .tab-contents h2 {
+        font-size: 1.5rem;
+    }
+
+    @keyframes autoplay3 {
+        0% {margin-top: 36rem}
+        4% {margin-top: 0rem}
+        31% {margin-top: 0rem}
+        35% {margin-top: -37rem}
+        64% {margin-top: -37rem}
+        68% {margin-top: -72rem}
+        96% {margin-top: -72rem}
+        100% {margin-top: -108rem}
     }
 
     /* footer */
@@ -127,30 +227,36 @@
         gap: 1rem;
         margin-bottom: 1rem;
     }
+
+    /* solutions */
+    /* .solution header h1 {
+        font-size: 2.5rem;
+    }
+     */
+    .solution-info {
+        padding: 1rem;
+    }
+
+    /* .text, .solution-img {
+        width: 100%;
+    } */
+    
+    .solution img {
+        width: 20rem;
+        height: 40rem;
+        border-end-end-radius: 5rem;
+        border-start-start-radius: 5rem;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) {
-    .image-container {
-        flex: 1 1 calc(33.33% - 10px);
-    }
-    
     .faq-info {
         text-align: center;
     }
 }
 
-@media only screen and (max-width: 900px) {
-    .image-container {
-        flex: 1 1 calc(50% - 10px);
-    }
-
-}
-
 @media only screen and (max-width: 600px) {
-    .image-container {
-        flex: 1 1 100%;
-    }
-
     .about {
         display: flex;
         flex-direction: column;
@@ -222,5 +328,82 @@
     .testimony ul li:last-child img{
         display: none;
     }
+}
+
+@media only screen and (max-width: 475px) {
+    .testimonies {
+        height: 35rem;
+    }
+
+    @keyframes autoplay3 {
+        0% {margin-top: 35rem}
+        4% {margin-top: 0rem}
+        31% {margin-top: 0rem}
+        35% {margin-top: -35rem}
+        64% {margin-top: -35rem}
+        68% {margin-top: -71rem}
+        96% {margin-top: -71rem}
+        100% {margin-top: -101rem}
+    }
+
+    .testimony img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .testimony ul li:first-child img,
+    .testimony ul li:last-child img{
+        display: none;
+    }
 
 }
+
+@media only screen and (max-width: 368px) {
+    .testimonies {
+        height: 35rem;
+    }
+
+    @keyframes autoplay3 {
+        0% {margin-top: 35rem}
+        4% {margin-top: 0rem}
+        31% {margin-top: 0rem}
+        35% {margin-top: -35rem}
+        64% {margin-top: -35rem}
+        68% {margin-top: -71rem}
+        96% {margin-top: -71rem}
+        100% {margin-top: -101rem}
+    }
+
+    .testimony img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .testimony ul li:first-child img,
+    .testimony ul li:last-child img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1206px) {
+     /* profiles */
+    /* .profiles {
+        width: 100%;
+        padding-top: 0;
+    } */
+
+    .profile {
+        padding-top: 0;
+        gap: 2rem;
+    }
+
+    /* .card--info {
+        width: 100%;
+    } */
+
+    .card--display img {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    }
+} 

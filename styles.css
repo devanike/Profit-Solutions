@@ -6,8 +6,14 @@
     box-sizing: border-box;
 }
 
-html {
+/* html {
     height: 100%;
+} */
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "SUSE", sans-serif;
 }
 
 :root {
@@ -20,11 +26,11 @@ html {
     --orange-color: #FE8D00;
 }
 
-body {
+/* body {
     font-family: "SUSE", sans-serif;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
-}
+} */
 
 h1 {
     font-size: 4rem;
@@ -76,6 +82,7 @@ a {
 }
 
 .container {
+    width: 100%;
     max-width: 100%;
     background-color: var(--bgcolor);
     max-height: fit-content;
@@ -87,30 +94,9 @@ a {
     width: 100%;
     height: 100vh;
     color: var(--text2-color);
-    /* padding: 4rem 0; */
     position: relative;
     overflow: hidden;
-    /* background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; */
-    /* animation: slideBackground 10s infinite ease-in-out; */
 }
-
-/* Define the sliding animation */
-/* @keyframes slideBackground {
-    0% {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/premium_photo-1682656220562-32fde8256295.jpeg') no-repeat center/cover;
-    }
-    33% {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/building-4.jpg') no-repeat center/cover;
-    }
-    66% {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/building-3.jpg') no-repeat center/cover;
-    }
-    100% {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/premium_photo-1682656220562-32fde8256295.jpeg') no-repeat center/cover;
-    }
-} */
 
 .intro-info {
     display: flex;
@@ -173,12 +159,13 @@ a {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     position: absolute;
     top: 0;
+    left: 0;
 }
 
 .intro-overlay h1, .intro-overlay h4{
     display: inline-block;
     overflow: hidden;
-    /* white-space: nowrap; */
+    white-space: wrap;
 }
 
 .intro-overlay h1 {
@@ -187,12 +174,12 @@ a {
 
 .intro-info div {
     /* width: 0px; */
-    animation: reveal 7s infinte;
+    /* animation: reveal 7s infinte; */
 }
 
 .intro-info h4 {
-    margin-left: -355px;
-    animation: slidein 7s infinite;
+    /* margin-left: -355px; */
+    /* animation: slidein 7s infinite; */
 }
 
 @keyframes showup {
@@ -388,8 +375,9 @@ a {
 /* About section */
 .main {
     margin: 5rem 0;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
+    /* overflow: hidden; */
 }
 
 .about {
@@ -502,21 +490,22 @@ a {
 
 /* Features */
 .features, .benefits {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     margin: 7rem 0;
     width: 100%;
 }
 
 .heading {
-    display: grid;
-    /* max-width: 30rem; */
-    font-style: normal;
-    margin: auto;
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    font-style: normal;
+    max-width: 30rem;
+    padding: 0 1rem;
     color: black;
-    border-radius: 4rem;
     font-family: "Playfair Display", serif;
 }
 
@@ -527,7 +516,6 @@ a {
 .heading h5 {
     font-size: 3rem;
     font-family: "Tangerine", cursive;
-    width: 35rem;
 }
 
 .features-images {
@@ -541,7 +529,7 @@ a {
 .image-container {
     position: relative;
     overflow: hidden;
-    flex: 1 1 calc(25% - 10px);
+    width: 30%;
 }
 
 .image-container img {
@@ -1153,11 +1141,11 @@ header {
 
 /* documentation */
 .docs {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    min-height: 200vh;
 }
 
 .tabs {
@@ -1168,21 +1156,15 @@ header {
     font-size: 0;
 }
 
-.tabs li {
-    /* display: inline; */
-}
-
 .tabs li a {
     font-weight: 700;
-    font-size: 16px;
+    font-size: .8rem;
     text-decoration: none;
     color: #8D8D8D;
     border: 1px solid #DCDADA;
     background-color: #F5F5F5;
-    height: 5em;
-    line-height: 5em;
     display: inline-block;
-    padding: 0 3em;
+    padding: .8rem;
     transition: all .3s ease;
 }
 
