@@ -10,34 +10,39 @@ window.onscroll = function() {
     }
 }
 
-// image slide
-const slideImg = document.getElementById("sliderImg")
-let images = [
-    "img/building-1.jpg",
-    "img/building-2.jpg",
-    "img/building-3.jpg",
-    "img/building-4.jpg"
-]
+// intro animation
+let nextDom = document.getElementById('next')
+let carouselDom = document.querySelector('.carousel');
+let listItemDom = document.querySelector('.carousel .list')
+let timeAutoNext = 5000;
+let timeRunning = 3000
+let runTimeOut;
+let runAutoRun = setTimeout ( () => {
+    nextDom.click()
+}, timeAutoNext)
 
-// let len = images.length;
-let i = 0;
-// function slider() {
-//     if (i > len-1) {
-//         i = 0;
-//     }
-//     slideImg.src = images[i];
-//     i++;
-//     setTimeout("slider()", 3000)
-// }
-
-function slider() {
-    slideImg.src = images[i];
-    i = (i + 1) % images.length; // Loop back to the first image after the last one
-    setTimeout(slider, 3000); // Pass the function directly
+nextDom.onclick = function() {
+    showSlider('next')
 }
 
-// Start the slider when the page loads
-window.onload = slider;
+function showSlider(type) {
+    let itemSlider = document.querySelectorAll('.carousel .list .item');
+
+    if(type === 'next') {
+        listItemDom.appendChild(itemSlider[0])
+        carouselDom.classList.add('next')
+    }
+
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(() => {
+        carouselDom.classList.remove('next')
+    }, timeRunning)
+
+    clearTimeout(runAutoRun);
+    runAutoRun = setTimeout(() => {
+        nextDom.click();
+    }, timeAutoNext)
+}
 
 // circle animation
 

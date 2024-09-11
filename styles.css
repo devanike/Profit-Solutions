@@ -11,7 +11,8 @@
 } */
 
 html, body {
-    width: 100%;
+    /* width: 100%; */
+    width: 100vw;
     overflow-x: hidden;
     font-family: "SUSE", sans-serif;
 }
@@ -90,119 +91,134 @@ a {
 }
 
 /* Intro section */
-.intro {
-    width: 100%;
+.carousel {
+    width: 100vw;
     height: 100vh;
-    color: var(--text2-color);
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
-.intro-info {
+.carousel .list .item {
+    position: absolute;
+    inset: 0 0 0 0; /*top: 0, left: 0, right: 0, bottom: 0 */
+}
+
+.carousel .list .item .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .contents{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 1140px;
+    max-width: 80%;
+    transform: translateX(-50%);
+    padding-right: 1rem;
+    box-sizing: border-box;
+    text-shadow: 0 5px 10px #0004;
+    color: var(--text2-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: left;
     gap: 1rem;
-    height: 100%;
-    padding-left: 2rem;
-    position: relative;
-    z-index: 2;
 }
 
-.intro-info img {
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .contents a img,
+.carousel .list .item:nth-child(1) .contents h1,
+.carousel .list .item:nth-child(1) .contents h4,
+.carousel .list .item:nth-child(1) .contents a.btn {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 1s 1s linear 1 forwards;
+}
+
+@keyframes showContent{
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.carousel .list .item:nth-child(1) .contents a img {
+    animation-delay: 1.2s;
+}
+
+.carousel .list .item:nth-child(1) .contents h1 {
+    animation-delay: 1.4s;
+}
+
+.carousel .list .item:nth-child(1) .contents h4 {
+    animation-delay: 1.6s;
+}
+
+.carousel .list .item:nth-child(1) .contents a.btn {
+    animation-delay: 1.8s;
+}
+
+.carousel.next .list .item:nth-child(1) > img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage .8s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 300px;
+    max-width: 30%;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows.hide-arrows {
+    visibility: hidden;
+}
+
+.carousel .list .item .contents a img {
     width: 20rem;
 }
 
-.intro a.btn {
-    background-color: var(--main-color);
-    color: var(--text2-color);
-    font-size: 1.2rem;
+.carousel .list .item .contents h4 {
+    /* margin-bottom: 2rem; */
 }
 
-.intro a.btn:hover {
+.contents a.btn {
+    background-color: var(--main-color);
+    color: var(--text2-color);
+    font-size: 1rem;
+}
+
+.contents a.btn:hover {
     background: transparent;
     color: var(--text2-color);
     border: 2px solid var(--main-color);
 }
-
-.slider {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-}
-
-#sliderImg {
-    width: 100%;
-    height: 100%;
-    animation: zoom 3s linear infinite;
-}
-
-@keyframes zoom {
-    0%{
-        transform: scale(1.3);
-    }
-    15%{
-        transform: scale(1);
-    }
-    85%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(1.3);
-    }
-}
-
-.intro-overlay {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.intro-overlay h1, .intro-overlay h4{
-    display: inline-block;
-    overflow: hidden;
-    white-space: wrap;
-}
-
-.intro-overlay h1 {
-    animation: showup 3s infinite;
-}
-
-.intro-info div {
-    /* width: 0px; */
-    /* animation: reveal 7s infinte; */
-}
-
-.intro-info h4 {
-    /* margin-left: -355px; */
-    /* animation: slidein 7s infinite; */
-}
-
-@keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
-}
-
-@keyframes slidein {
-    0% { margin-left:-1200px; }
-    20% { margin-left:-1200px; }
-    95% { margin-left:0px; }
-    100% { margin-left:0px; }
-}
-
-@keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:355px;}
-    80% {opacity:1;}
-    100% {opacity:0;width:355px;}
-}
+/* 
 
 /* navbar */
 .navbar {
@@ -259,7 +275,8 @@ a {
     right:0;
     background-color: var(--main-color);
     padding: .5rem 1rem;
-    margin-bottom: .3rem;
+    /* margin-bottom: .3rem; */
+    border-bottom: 1px solid var(--text2-color);
     z-index: 20;
     width: 100%;
 }
@@ -436,7 +453,6 @@ a {
 
 .about-info a.btn:hover {
     background-color:var(--text1-color);
-    /* color: var(--text2-color); */
     color: var(--main-color);
 }
 
@@ -494,7 +510,7 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin: 7rem 0;
+    margin: 3rem 0;
     width: 100%;
 }
 
