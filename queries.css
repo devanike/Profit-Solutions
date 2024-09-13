@@ -73,30 +73,28 @@
     }
 
     /* about section */
-    .about {
-        display: flex;
-        flex-direction: column;
-        gap: 18rem;
-    }
-
-    .image-box {
+    /* .image-box {
         margin-top: -3rem;
-    }
+    } */
 
-    .about img, .colored-box {
+    .about img  {
         width: 15rem;
         height: 15rem;
     }
 
-    .about-info {
+    /* .about-info {
         width: 100%;
         padding: 1rem;
         gap: .5rem;
         margin-top: -2rem;
-    }
+    } */
 
     .about-info h1 {
         font-size: 2.5rem;
+    }
+
+    .about-info p {
+        font-size: 1rem;
     }
 
     /* benefits and features heading */
@@ -215,16 +213,49 @@
     }
 }
 
-@media only screen and (min-width:769px) and (max-width: 950px) {
-    .about img, .colored-box {
-        width: 18rem;
-        height: 18rem;
+@media only screen and (max-width: 415px) {
+    /* .about img {
+        width: 13rem;
+        height: 13rem;
+    } */
+}
+
+@media only screen and (max-width: 351px) {
+    /* .about img {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .about h1 {
+        font-size: 1.5rem;
+    } */
+}
+
+/* @media only screen and (max-width: 1134px) {
+    .about {
+        gap: .5rem;
     }
 
     .about-info {
-        gap: 1rem;
-        margin-bottom: 1rem;
+        width: 90%;
+        gap: .5rem;
+        margin: 2rem 0;
     }
+} */
+
+@media only screen and (min-width:769px) and (max-width: 950px) {
+    /* .about img, .colored-box {
+        width: 19rem;
+        height: 19rem;
+    }
+
+    .about-info p {
+        font-size: .9rem;
+    }
+
+    .about-info h1 {
+        font-size: 1.8rem;
+    } */
 
     /* solutions */
     .solution-info {
@@ -248,9 +279,18 @@
 
 @media only screen and (max-width: 600px) {
     .about {
-        display: flex;
-        flex-direction: column;
-        gap: 22rem;
+        gap: 1rem;
+        margin-top: -2rem;
+    }
+    .image-box {
+        width: 100%;
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+
+    .about-info {
+        padding: 1rem;
+        width: 100%;
     }
 }
 
