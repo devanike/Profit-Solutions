@@ -145,3 +145,51 @@ function tabClick(event) {
     }
 }
 
+// modal content
+// const modal = document.getElementById("imageModal");
+// const modalImg = document.getElementById("modalImage");
+// const closeModalBtn = document.getElementsByClassName("close-modal")[0];
+
+// document.querySelectorAll(".image-container img").forEach(function(image) {
+//     image.addEventListener("click", function() {
+//         modal.style.display = "flex";
+
+//         modalImg.src = this.src;
+//     });
+// });
+
+// closeModalBtn.onclick = function() {
+//     modal.style.display = "none";
+// }
+
+// window.onclick = function(event) {
+//     if (event.target === modal) {
+//         modal.style.display = "none";
+//     }
+// }
+const overlays = document.querySelectorAll(".overlay");
+overlays.forEach((overlay) => {
+    overlay.addEventListener("click", (e) => {
+        const imgSrc = e.currentTarget.previousElementSibling.src;
+        imgModal(imgSrc);
+    });
+});
+
+let imgModal = (src) => {
+    const modal = document.createElement("div");
+    modal.setAttribute("class", "modal");
+    //add the modal to the main section or the parent element
+    document.querySelector(".main").append(modal);
+    //adding image to modal
+    const newImage = document.createElement("img");
+    newImage.setAttribute("src", src);
+    //creating the close button
+    const closeBtn = document.createElement("i");
+    closeBtn.setAttribute("class", "fas fa-times closeBtn");
+    //close function
+    closeBtn.onclick = () => {
+        modal.remove();
+    };
+    modal.append(newImage, closeBtn);
+};
+
