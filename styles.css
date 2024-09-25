@@ -93,7 +93,7 @@ a {
 /* Intro section */
 .carousel {
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     overflow: hidden;
     position: relative;
 }
@@ -111,7 +111,7 @@ a {
 
 .carousel .list .item .contents{
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 50%;
     width: 1140px;
     max-width: 80%;
@@ -404,7 +404,7 @@ a {
 
 /* About section */
 .main {
-    margin: 5rem 0;
+    margin-top: 5rem;
     max-width: 100%;
     height: 100%;
     /* overflow: hidden; */
@@ -419,33 +419,35 @@ a {
     justify-content: center;
     gap: .5rem;
     height: fit-content;
-    overflow: hidden;
+    padding-bottom: 2rem;
+    /* overflow: hidden; */
 }
 
 .image-box {
-    /* position: relative; */
+    position: relative;
     display: flex;
     justify-content: center;
     width: 40%;
+    margin-top: -3rem;
 }
 
 .colored-box, .about img {
-    /* position: absolute; */
+    position: absolute;
 }
 
-/* .colored-box {
-    width: 25rem;
-    height: 25rem;
-    background-color: var(--main-color);
+.colored-box {
+    width: 23rem;
+    height: 23rem;
+    background-color: var(--orange-color);
     transform: rotate(-10deg);
     border-radius: 5rem;
     transform-origin: center right;
-    } */
+    }
     
 .about img {
-    border: 3px solid var(--orange-color);
-    width: 25rem;
-    height: 25rem;
+    /* border: 3px solid var(--orange-color); */
+    width: 23rem;
+    height: 23rem;
     border-radius: 5rem;
     transform: rotate(10deg);
     transform-origin: center left;
@@ -453,20 +455,20 @@ a {
 
 .about-info {
     width: 50%;
-    height: 30rem;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     gap: .5rem;
     text-align: justify;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 .about-info h1 {
     color: var(--main-color);
 }
 .about-info p {
-    font-size: 1rem;
+    /* font-size: 1.3rem; */
 }
 
 .about-info a.btn {
@@ -529,7 +531,7 @@ a {
 }
 
 /* Features */
-.features, .benefits {
+.features, #benefits {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -739,7 +741,7 @@ a {
 .video {
     margin: auto;
     background: url("img/video.jpg") no-repeat center/cover;
-    max-width: 70%;
+    max-width: 60%;
     height: 30rem;
     position: relative;
 }
@@ -1135,7 +1137,6 @@ header {
 .details {
     margin-top: 1rem;
     margin-bottom: 3rem;
-
 }
 
 .details li {
@@ -1384,7 +1385,7 @@ header {
 }
 
 .profile {
-    font-weight: bold;
+    /* font-weight: bold; */
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -1447,3 +1448,138 @@ header {
     width: 100%;
     height: 100%;
 }
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 1rem;
+    gap: 2rem;
+}
+
+.product {
+    width: 20rem;
+    height: 30rem;
+    background: url(img/jakub-zerdzicki-U4-I4oH4xlg-unsplash.jpg) no-repeat center / cover;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.product .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: var(var(--bgcolor));
+    height: 60%;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 0;
+    z-index: 4;
+}
+
+.product .text h3, .product .text p {
+    margin: 0 1rem;
+    color: var(--text2-color);
+}
+
+.triangle{
+    width: 100%;
+    height: 14rem;
+    background: var(--orange-color);
+    z-index: 9;
+    transform: matrix(1.01, -0.3, 0, 2, -1, 10);
+    z-index: 3;
+}
+
+.mission {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
+
+.mission .card {
+    background-color: var(--bgcolor);
+    bottom: 0;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    height: 300px;
+    left: 0;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    width: 300px;
+}
+.mission .card:hover {
+    height: 40rem;
+    width: 300px;
+}
+
+.mission .card:hover .card_circle {
+    background-size: cover;
+    border-radius: 0;
+    margin-top: -130px;
+}
+
+.mission .card:hover h2 {
+    background: var(--orange-color);
+    color: var(--text2-color);
+    margin-top: 100px;
+    padding: 5px;
+}
+
+.mission .card:hover h2 small { color: #fff }
+.mission .card:hover p { 
+    margin-top: 300px;
+    display: block;
+}
+
+.mission .card_circle {
+    background: url(img/video.jpg) no-repeat center bottom;
+    background-color: var(--orange-color);
+    background-size: cover;
+    border-radius: 50%;
+    height: 400px;
+    margin-left: -75px;
+    margin-top: -270px;
+    position: absolute;
+    width: 450px;
+}
+.mission .card h2 {
+    color: var(--orange-color);
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 150px;
+    margin-bottom: 1rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    padding: 1rem;
+}
+.mission .card p{
+    color: rgba(0,0,0,.6);
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 200px;
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+    padding: 1rem;
+    display: none;
+}
+
+h2.transition {
+    margin-bottom: 2rem;
+}
+

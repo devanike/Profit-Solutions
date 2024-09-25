@@ -10,40 +10,6 @@ window.onscroll = function() {
     }
 }
 
-// intro animation
-let nextDom = document.getElementById('next')
-let carouselDom = document.querySelector('.carousel');
-let listItemDom = document.querySelector('.carousel .list')
-let timeAutoNext = 5000;
-let timeRunning = 3000
-let runTimeOut;
-let runAutoRun = setTimeout ( () => {
-    nextDom.click()
-}, timeAutoNext)
-
-nextDom.onclick = function() {
-    showSlider('next')
-}
-
-function showSlider(type) {
-    let itemSlider = document.querySelectorAll('.carousel .list .item');
-
-    if(type === 'next') {
-        listItemDom.appendChild(itemSlider[0])
-        carouselDom.classList.add('next')
-    }
-
-    clearTimeout(runTimeOut);
-    runTimeOut = setTimeout(() => {
-        carouselDom.classList.remove('next')
-    }, timeRunning)
-
-    clearTimeout(runAutoRun);
-    runAutoRun = setTimeout(() => {
-        nextDom.click();
-    }, timeAutoNext)
-}
-
 // circle animation
 
 let circles = document.querySelectorAll('.circle');
@@ -60,8 +26,8 @@ function animateCircles() {
 }
 
 // FAQ Accordion 
-window.addEventListener('scroll', animateCircles);
-animateCircles();
+// window.addEventListener('scroll', animateCircles);
+// animateCircles();
 
 const accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -146,27 +112,6 @@ function tabClick(event) {
 }
 
 // modal content
-// const modal = document.getElementById("imageModal");
-// const modalImg = document.getElementById("modalImage");
-// const closeModalBtn = document.getElementsByClassName("close-modal")[0];
-
-// document.querySelectorAll(".image-container img").forEach(function(image) {
-//     image.addEventListener("click", function() {
-//         modal.style.display = "flex";
-
-//         modalImg.src = this.src;
-//     });
-// });
-
-// closeModalBtn.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// window.onclick = function(event) {
-//     if (event.target === modal) {
-//         modal.style.display = "none";
-//     }
-// }
 const overlays = document.querySelectorAll(".overlay");
 overlays.forEach((overlay) => {
     overlay.addEventListener("click", (e) => {
@@ -176,17 +121,14 @@ overlays.forEach((overlay) => {
 });
 
 let imgModal = (src) => {
-    const modal = document.createElement("div");
-    modal.setAttribute("class", "modal");
-    //add the modal to the main section or the parent element
-    document.querySelector(".main").append(modal);
-    //adding image to modal
-    const newImage = document.createElement("img");
-    newImage.setAttribute("src", src);
-    //creating the close button
     const closeBtn = document.createElement("i");
+    const modal = document.createElement("div");
+    const newImage = document.createElement("img");
+    
+    modal.setAttribute("class", "modal");
+    document.querySelector(".main").append(modal);
+    newImage.setAttribute("src", src);
     closeBtn.setAttribute("class", "fas fa-times closeBtn");
-    //close function
     closeBtn.onclick = () => {
         modal.remove();
     };
